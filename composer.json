@@ -1,0 +1,23 @@
+{
+	"name": "apwg/ecx-api-client",
+	"version": "0.4.1.0",
+	"type": "library",
+	"description": "The official PHP client to the APWG API",
+	"authors": [
+		{
+			"name": "Andrew Breksa",
+			"email": "abreksa4@gmail.com"
+		}
+	],
+	"require": {
+		"guzzlehttp/guzzle": "6.2.2"
+	},
+	"autoload": {
+		"psr-0": {
+			"APWG": "src/"
+		}
+	},
+	"require-dev": {
+		"apigen/apigen": "4.1.2"
+	}
+}

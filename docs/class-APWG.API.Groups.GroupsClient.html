@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class APWG\API\Groups\GroupsClient</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Overview</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-APWG.API.Groups.html" title="Summary of APWG\API\Groups"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-APWG.html">
+							APWG<span></span>
+						</a>
+							<ul>
+					<li class="active">
+						<a href="namespace-APWG.API.html">
+							API<span></span>
+						</a>
+							<ul>
+					<li class="active">
+						<a href="namespace-APWG.API.Groups.html">
+							Groups						</a>
+							</li>
+					<li>
+						<a href="namespace-APWG.API.Index.html">
+							Index						</a>
+							</li>
+					<li>
+						<a href="namespace-APWG.API.MalIP.html">
+							MalIP						</a>
+							</li>
+					<li>
+						<a href="namespace-APWG.API.Phish.html">
+							Phish						</a>
+							</li>
+					<li>
+						<a href="namespace-APWG.API.Query.html">
+							Query						</a>
+							</li>
+								</ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-APWG.API.Groups.GroupsClient.html">GroupsClient</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class GroupsClient</h1>
+
+
+	<div class="description">
+	<p>Interact with the Groups API module</p>
+
+<p>Class GroupsClient</p>
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-APWG.API.AbstractClient.html"><span>APWG\API\AbstractClient</span></a>
+			
+			 implements 
+				<a href="class-APWG.API.ClientInterface.html"><span>APWG\API\ClientInterface</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>APWG\API\Groups\GroupsClient</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-APWG.html">APWG</a>\<a href="namespace-APWG.API.html">API</a>\<a href="namespace-APWG.API.Groups.html">Groups</a><br>
+		<b>Package:</b> APWG\API\Groups<br>
+
+				<b>Copyright:</b>
+				Copyright (c) 2016. The Anti-Phishing Working Group<br>
+				<b>Author:</b>
+				Andrew Breksa<br>
+			<b>Located at</b> <a href="source-class-APWG.API.Groups.GroupsClient.html#7-293" title="Go to source code">APWG/API/Groups/GroupsClient.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="getSpec" id="_getSpec">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getSpec">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#24-33" title="Go to source code">getSpec</a>( <span>string|null <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				<p>Returns the YAML Swagger 2 specification for the API</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the YAML Swagger 2 specification for the API</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getGroupUrl" id="_getGroupUrl">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getGroupUrl">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#35-50" title="Go to source code">getGroupUrl</a>( <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				<p>Get the URL for a group</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the URL for a group</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getGroupId" id="_getGroupId">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getGroupId">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#52-58" title="Go to source code">getGroupId</a>( )</code>
+
+			<div class="description short">
+				<p>Get the stored group id</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the stored group id</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setGroupId" id="_setGroupId">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setGroupId">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#60-67" title="Go to source code">setGroupId</a>( <span>string <var>$group_id</var></span> )</code>
+
+			<div class="description short">
+				<p>Set the stored group id, used as the default when none is provided to the class methods</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Set the stored group id, used as the default when none is provided to the class methods</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getSchema" id="_getSchema">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getSchema">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#69-85" title="Go to source code">getSchema</a>( <span>array <var>$options</var> = []</span>, <span>string|null <var>$action</var> = <span class="php-keyword1">NULL</span></span>, <span>string|null <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				<p>Returns the JSON schema for a specific action, defaults to the full group threat model schema (GET)</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the JSON schema for a specific action, defaults to the full group threat model schema (GET)</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+						<dt><var>$action</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="activity" id="_activity">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_activity">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#87-99" title="Go to source code">activity</a>( <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				<p>Search the activity listing for the group's entities</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Search the activity listing for the group's entities</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="assetHead" id="_assetHead">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_assetHead">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#101-111" title="Go to source code">assetHead</a>( <span>integer <var>$entity_id</var></span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				<p>Get header information for a specific entity</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get header information for a specific entity</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$entity_id</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="assetActivity" id="_assetActivity">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_assetActivity">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#113-126" title="Go to source code">assetActivity</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				<p>Search the activity listing for a specific entity</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Search the activity listing for a specific entity</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$entity_id</var></dt>
+						<dd></dd>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="patch" id="_patch">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_patch">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#128-143" title="Go to source code">patch</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$data</var> = []</span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				<p>Edit a group entity</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Edit a group entity</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$entity_id</var></dt>
+						<dd></dd>
+						<dt><var>$data</var></dt>
+						<dd></dd>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get" id="_get">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#145-158" title="Go to source code">get</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				<p>Get a specific entity</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get a specific entity</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$entity_id</var></dt>
+						<dd></dd>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="search" id="_search">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_search">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#160-172" title="Go to source code">search</a>( <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				<p>Search the group's entities</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Search the group's entities</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="create" id="_create">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_create">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#174-188" title="Go to source code">create</a>( <span>array <var>$data</var> = []</span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				<p>Submit a new entity to this group</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Submit a new entity to this group</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd></dd>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="uploadFile" id="_uploadFile">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_uploadFile">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#190-214" title="Go to source code">uploadFile</a>( <span>integer <var>$entity_id</var></span>, <span>string <var>$file_path</var></span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span>, <span>callable <var>$progress_callback</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$entity_id</var></dt>
+						<dd></dd>
+						<dt><var>$file_path</var></dt>
+						<dd></dd>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+						<dt><var>$progress_callback</var></dt>
+						<dd>Callback to be executed on transfer progress, as per http://docs.guzzlephp.org/en/latest/request-options.html#progress</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getFile" id="_getFile">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getFile">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#216-230" title="Go to source code">getFile</a>( <span>integer <var>$entity_id</var></span>, <span>string <var>$file_hash</var></span>, <span>array <var>$options</var> = []</span>, <span>null <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$entity_id</var></dt>
+						<dd></dd>
+						<dt><var>$file_hash</var></dt>
+						<dd></dd>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="downloadFile" id="_downloadFile">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_downloadFile">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#232-249" title="Go to source code">downloadFile</a>( <span>integer <var>$entity_id</var></span>, <span>string <var>$file_hash</var></span>, <span>array <var>$options</var> = []</span>, <span>null <var>$group_id</var> = <span class="php-keyword1">NULL</span></span>, <span>callable <var>$progress_callback</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$entity_id</var></dt>
+						<dd></dd>
+						<dt><var>$file_hash</var></dt>
+						<dd></dd>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+						<dt><var>$progress_callback</var></dt>
+						<dd>Callback to be executed on transfer progress, as per http://docs.guzzlephp.org/en/latest/request-options.html#progress</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getFiles" id="_getFiles">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getFiles">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#251-264" title="Go to source code">getFiles</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$options</var> = []</span>, <span>null|integer <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$entity_id</var></dt>
+						<dd></dd>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getNotes" id="_getNotes">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getNotes">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#266-279" title="Go to source code">getNotes</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$options</var> = []</span>, <span>null|integer <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$entity_id</var></dt>
+						<dd></dd>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="addNote" id="_addNote">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_addNote">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#281-292" title="Go to source code">addNote</a>( <span>integer <var>$entity_id</var></span>, <span>string <var>$note</var></span>, <span>null|integer <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$entity_id</var></dt>
+						<dd></dd>
+						<dt><var>$note</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods inherited from <a href="class-APWG.API.AbstractClient.html#methods">APWG\API\AbstractClient</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-APWG.API.AbstractClient.html#___construct">__construct()</a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#__call">_call()</a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#_getApiKey">getApiKey()</a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#_getBaseUri">getBaseUri()</a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#_getCache">getCache()</a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#_getClient">getClient()</a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#_getGlobalOptions">getGlobalOptions()</a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#_getGuzzleOptions">getGuzzleOptions()</a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#_setApiKey">setApiKey()</a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#_setBaseUri">setBaseUri()</a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#_setCache">setCache()</a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#_setClient">setClient()</a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#_setGlobalOptions">setGlobalOptions()</a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#_setGuzzleOptions">setGuzzleOptions()</a></code>
+			</p>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+		</div>
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Properties inherited from <a href="class-APWG.API.AbstractClient.html#properties">APWG\API\AbstractClient</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-APWG.API.AbstractClient.html#$apiKey"><var>$apiKey</var></a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#$base_uri"><var>$base_uri</var></a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#$cache"><var>$cache</var></a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#$client"><var>$client</var></a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#$globalOptions"><var>$globalOptions</var></a></code>, 
+				<code><a href="class-APWG.API.AbstractClient.html#$guzzleOptions"><var>$guzzleOptions</var></a></code>
+			</p>
+		</div>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
