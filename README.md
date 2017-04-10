@@ -3,9 +3,30 @@
 
 Fully supports all features of the eCX API.
 
-See the [/docs](/docs) directory for HTML documentation. 
+See the [docs](https://apwg.github.io/ecx-api-client/) for more information.
 
-Example script to write a time ranged and confidence filtered list to a file in csv (uses nategood/commando for cli options):
+To install via [composer](https://getcomposer.org/), add the following to your composer.json:
+
+```json
+{
+	"repositories":[
+		{
+			"type":"git",
+			"url":"https://github.com/APWG/ecx-api-client"
+		}
+	],
+	"require":{
+		"apwg/ecx-api-client": "dev-master"
+	}
+}
+```
+
+To install without composer, clone this repo on disk and execute a `composer install` under the repository root to 
+ install the needed dependencies. You can then autoload the library and it's dependencies via 
+ `require_once($pathToClient . "/vendor/autoload.php");`
+
+Example script to write a time ranged and confidence filtered list to a file in csv (uses 
+ [nategood/commando](https://github.com/nategood/commando) for cli options):
 ```php
 #!/usr/bin/env php
 <?php
@@ -39,6 +60,7 @@ while ($toBreak == FALSE) {
 		'dd_date_end'      => $command['dd_date_end'],
 		'confidence_level' => $command['confidence_level'],
 		'page'             => $i,
+		'fields'           => implode(',', $headers)
 	])->getBody()->getContents(), TRUE);
 	if ($data['current_count'] < 500) {
 		$toBreak = TRUE;
