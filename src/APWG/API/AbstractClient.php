@@ -51,6 +51,11 @@ abstract class AbstractClient implements APIClientInterface {
 	 */
 	protected $guzzleOptions = [
 		'timeout' => 5,
+		'curl'    => [
+			CURLOPT_TIMEOUT        => 0,
+			CURLOPT_TIMEOUT_MS     => 0,
+			CURLOPT_CONNECTTIMEOUT => 0,
+		],
 	];
 
 	/**
