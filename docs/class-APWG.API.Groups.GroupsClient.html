@@ -58,6 +58,10 @@
 							API<span></span>
 						</a>
 							<ul>
+					<li>
+						<a href="namespace-APWG.API.Alerts.html">
+							Alerts						</a>
+							</li>
 					<li class="active">
 						<a href="namespace-APWG.API.Groups.html">
 							Groups						</a>
@@ -73,10 +77,6 @@
 					<li>
 						<a href="namespace-APWG.API.Phish.html">
 							Phish						</a>
-							</li>
-					<li>
-						<a href="namespace-APWG.API.Query.html">
-							Query						</a>
 							</li>
 					<li>
 						<a href="namespace-APWG.API.ReportPhishing.html">
@@ -110,7 +110,7 @@
 
 
 	<div class="description">
-	<p>Interact with the Groups API module</p>
+	<p>Interact with the Groups API</p>
 
 <p>Class GroupsClient</p>
 	</div>
@@ -146,10 +146,10 @@
 		<b>Package:</b> APWG\API\Groups<br>
 
 				<b>Copyright:</b>
-				Copyright (c) 2016. The Anti-Phishing Working Group<br>
+				Copyright (c) 2017 The Anti-Phishing Working Group<br>
 				<b>Author:</b>
 				Andrew Breksa<br>
-			<b>Located at</b> <a href="source-class-APWG.API.Groups.GroupsClient.html#7-293" title="Go to source code">APWG/API/Groups/GroupsClient.php</a>
+			<b>Located at</b> <a href="source-class-APWG.API.Groups.GroupsClient.html#7-306" title="Go to source code">APWG/API/Groups/GroupsClient.php</a>
 		<br>
 	</div>
 
@@ -343,6 +343,46 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="getParamSchema" id="_getParamSchema">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getParamSchema">#</a>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#87-98" title="Go to source code">getParamSchema</a>( <span>array <var>$options</var> = []</span>, <span>null <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				<p>Return a JSON schema for the group's GET:/groups/<group_id> endpoint parameters, useful for validating Alert queries</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return a JSON schema for the group's GET:/groups/<group_id> endpoint parameters, useful for validating Alert queries</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+						<dt><var>$group_id</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="activity" id="_activity">
 
 			<td class="attributes"><code>
@@ -354,7 +394,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_activity">#</a>
-			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#87-99" title="Go to source code">activity</a>( <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#100-112" title="Go to source code">activity</a>( <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 			<div class="description short">
 				<p>Search the activity listing for the group's entities</p>
@@ -394,7 +434,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_assetHead">#</a>
-			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#101-111" title="Go to source code">assetHead</a>( <span>integer <var>$entity_id</var></span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#114-124" title="Go to source code">assetHead</a>( <span>integer <var>$entity_id</var></span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 			<div class="description short">
 				<p>Get header information for a specific entity</p>
@@ -434,7 +474,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_assetActivity">#</a>
-			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#113-126" title="Go to source code">assetActivity</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#126-139" title="Go to source code">assetActivity</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 			<div class="description short">
 				<p>Search the activity listing for a specific entity</p>
@@ -476,7 +516,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_patch">#</a>
-			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#128-143" title="Go to source code">patch</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$data</var> = []</span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#141-156" title="Go to source code">patch</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$data</var> = []</span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 			<div class="description short">
 				<p>Edit a group entity</p>
@@ -520,7 +560,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get">#</a>
-			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#145-158" title="Go to source code">get</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#158-171" title="Go to source code">get</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 			<div class="description short">
 				<p>Get a specific entity</p>
@@ -562,7 +602,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_search">#</a>
-			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#160-172" title="Go to source code">search</a>( <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#173-185" title="Go to source code">search</a>( <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 			<div class="description short">
 				<p>Search the group's entities</p>
@@ -602,7 +642,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_create">#</a>
-			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#174-188" title="Go to source code">create</a>( <span>array <var>$data</var> = []</span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#187-201" title="Go to source code">create</a>( <span>array <var>$data</var> = []</span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 			<div class="description short">
 				<p>Submit a new entity to this group</p>
@@ -644,7 +684,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_uploadFile">#</a>
-			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#190-214" title="Go to source code">uploadFile</a>( <span>integer <var>$entity_id</var></span>, <span>string <var>$file_path</var></span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span>, <span>callable <var>$progress_callback</var> = <span class="php-keyword1">NULL</span></span> )</code>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#203-227" title="Go to source code">uploadFile</a>( <span>integer <var>$entity_id</var></span>, <span>string <var>$file_path</var></span>, <span>array <var>$options</var> = []</span>, <span>null|string <var>$group_id</var> = <span class="php-keyword1">NULL</span></span>, <span>callable <var>$progress_callback</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 			<div class="description short">
 				
@@ -690,7 +730,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFile">#</a>
-			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#216-230" title="Go to source code">getFile</a>( <span>integer <var>$entity_id</var></span>, <span>string <var>$file_hash</var></span>, <span>array <var>$options</var> = []</span>, <span>null <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#229-243" title="Go to source code">getFile</a>( <span>integer <var>$entity_id</var></span>, <span>string <var>$file_hash</var></span>, <span>array <var>$options</var> = []</span>, <span>null <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 			<div class="description short">
 				
@@ -734,7 +774,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_downloadFile">#</a>
-			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#232-249" title="Go to source code">downloadFile</a>( <span>integer <var>$entity_id</var></span>, <span>string <var>$file_hash</var></span>, <span>array <var>$options</var> = []</span>, <span>null <var>$group_id</var> = <span class="php-keyword1">NULL</span></span>, <span>callable <var>$progress_callback</var> = <span class="php-keyword1">NULL</span></span> )</code>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#245-262" title="Go to source code">downloadFile</a>( <span>integer <var>$entity_id</var></span>, <span>string <var>$file_hash</var></span>, <span>array <var>$options</var> = []</span>, <span>null <var>$group_id</var> = <span class="php-keyword1">NULL</span></span>, <span>callable <var>$progress_callback</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 			<div class="description short">
 				
@@ -780,7 +820,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFiles">#</a>
-			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#251-264" title="Go to source code">getFiles</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$options</var> = []</span>, <span>null|integer <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#264-277" title="Go to source code">getFiles</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$options</var> = []</span>, <span>null|integer <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 			<div class="description short">
 				
@@ -822,7 +862,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNotes">#</a>
-			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#266-279" title="Go to source code">getNotes</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$options</var> = []</span>, <span>null|integer <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#279-292" title="Go to source code">getNotes</a>( <span>integer <var>$entity_id</var></span>, <span>array <var>$options</var> = []</span>, <span>null|integer <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 			<div class="description short">
 				
@@ -864,7 +904,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addNote">#</a>
-			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#281-292" title="Go to source code">addNote</a>( <span>integer <var>$entity_id</var></span>, <span>string <var>$note</var></span>, <span>null|integer <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+			<code><a href="source-class-APWG.API.Groups.GroupsClient.html#294-305" title="Go to source code">addNote</a>( <span>integer <var>$entity_id</var></span>, <span>string <var>$note</var></span>, <span>null|integer <var>$group_id</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 			<div class="description short">
 				

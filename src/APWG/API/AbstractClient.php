@@ -1,4 +1,5 @@
 <?php
+
 namespace APWG\API;
 
 use APWG\API\ClientInterface as APIClientInterface;
@@ -11,8 +12,8 @@ use Psr\Http\Message\ResponseInterface;
  *
  * Class AbstractClient
  * @package   APWG\API
- * @author    Andrew Breksa
- * @copyright Copyright (c) 2016. The Anti-Phishing Working Group
+ * @author Andrew Breksa <andrew@apwg.org>
+ * @copyright Copyright (c) 2017 The Anti-Phishing Working Group
  */
 abstract class AbstractClient implements APIClientInterface {
 
@@ -66,32 +67,11 @@ abstract class AbstractClient implements APIClientInterface {
 	protected $cache;
 
 	/**
-	 * Get the global options that are merged with every request
-	 *
-	 * @return array
-	 */
-	public function getGlobalOptions() {
-		return $this->globalOptions;
-	}
-
-	/**
-	 * Set the global options that are merged with every request
-	 *
-	 * @param array $globalOptions
-	 *
-	 * @return AbstractClient
-	 */
-	public function setGlobalOptions($globalOptions) {
-		$this->globalOptions = $globalOptions;
-		return $this;
-	}
-
-	/**
 	 * AbstractAPI constructor.
 	 *
-	 * @param string $apiKey        access token
-	 * @param string $base_uri      the base uri of the api
-	 * @param array  $guzzleOptions guzzle http options, overrides defaults
+	 * @param string $apiKey access token
+	 * @param string $base_uri the base uri of the api
+	 * @param array $guzzleOptions guzzle http options, overrides defaults
 	 */
 	public function __construct($base_uri, $apiKey, $guzzleOptions = []) {
 		$this->setBaseUri($base_uri);
@@ -117,9 +97,10 @@ abstract class AbstractClient implements APIClientInterface {
 	 * @return AbstractClient
 	 */
 	public function setGuzzleOptions($guzzleOptions) {
-		if (!empty($guzzleOptions)) {
+		if( ! empty($guzzleOptions)) {
 			$this->guzzleOptions = array_replace($this->getGuzzleOptions(), $guzzleOptions);
 		}
+
 		return $this;
 	}
 
@@ -141,6 +122,7 @@ abstract class AbstractClient implements APIClientInterface {
 	 */
 	public function setBaseUri($base_uri) {
 		$this->base_uri = $base_uri;
+
 		return $this;
 	}
 
@@ -162,12 +144,14 @@ abstract class AbstractClient implements APIClientInterface {
 				[
 					'headers' => [
 						'Authorization' => $this->getApiKey(),
-					]
+					],
 				],
-				(array_key_exists('headers', $options) || array_key_exists('multipart', $options)) ? [] : ['headers' => ['Content-Type' => 'application/json']],
+				(array_key_exists('headers', $options) || array_key_exists('multipart',
+						$options)) ? [] : ['headers' => ['Content-Type' => 'application/json']],
 				$this->getGlobalOptions()
 			)
 		));
+
 		return $this->cache;
 	}
 
@@ -189,6 +173,7 @@ abstract class AbstractClient implements APIClientInterface {
 	 */
 	public function setClient($client) {
 		$this->client = $client;
+
 		return $this;
 	}
 
@@ -210,6 +195,29 @@ abstract class AbstractClient implements APIClientInterface {
 	 */
 	public function setApiKey($apiKey) {
 		$this->apiKey = $apiKey;
+
+		return $this;
+	}
+
+	/**
+	 * Get the global options that are merged with every request
+	 *
+	 * @return array
+	 */
+	public function getGlobalOptions() {
+		return $this->globalOptions;
+	}
+
+	/**
+	 * Set the global options that are merged with every request
+	 *
+	 * @param array $globalOptions
+	 *
+	 * @return AbstractClient
+	 */
+	public function setGlobalOptions($globalOptions) {
+		$this->globalOptions = $globalOptions;
+
 		return $this;
 	}
 

@@ -59,6 +59,10 @@
 						</a>
 							<ul>
 					<li>
+						<a href="namespace-APWG.API.Alerts.html">
+							Alerts						</a>
+							</li>
+					<li>
 						<a href="namespace-APWG.API.Groups.html">
 							Groups						</a>
 							</li>
@@ -73,10 +77,6 @@
 					<li>
 						<a href="namespace-APWG.API.Phish.html">
 							Phish						</a>
-							</li>
-					<li>
-						<a href="namespace-APWG.API.Query.html">
-							Query						</a>
 							</li>
 					<li class="active">
 						<a href="namespace-APWG.API.ReportPhishing.html">
@@ -110,7 +110,9 @@
 
 
 	<div class="description">
-	<p>Class ReportPhishingClient</p>
+	<p>Interact with the Report_Phishing API</p>
+
+<p>Class ReportPhishingClient</p>
 	</div>
 
 	<dl class="tree well">
@@ -144,10 +146,10 @@
 		<b>Package:</b> APWG\API\ReportPhishing<br>
 
 				<b>Copyright:</b>
-				Copyright (c) 2016. The Anti-Phishing Working Group<br>
+				Copyright (c) 2017 The Anti-Phishing Working Group<br>
 				<b>Author:</b>
 				Andrew Breksa<br>
-			<b>Located at</b> <a href="source-class-APWG.API.ReportPhishing.ReportPhishingClient.html#8-42" title="Go to source code">APWG/API/ReportPhishing/ReportPhishingClient.php</a>
+			<b>Located at</b> <a href="source-class-APWG.API.ReportPhishing.ReportPhishingClient.html#8-57" title="Go to source code">APWG/API/ReportPhishing/ReportPhishingClient.php</a>
 		<br>
 	</div>
 
@@ -167,7 +169,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_search">#</a>
-			<code><a href="source-class-APWG.API.ReportPhishing.ReportPhishingClient.html#16-26" title="Go to source code">search</a>( <span>array <var>$options</var> = []</span> )</code>
+			<code><a href="source-class-APWG.API.ReportPhishing.ReportPhishingClient.html#18-28" title="Go to source code">search</a>( <span>array <var>$options</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Searches the report_phishing module</p>
@@ -205,7 +207,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get">#</a>
-			<code><a href="source-class-APWG.API.ReportPhishing.ReportPhishingClient.html#29-40" title="Go to source code">get</a>( <span>integer <var>$id</var></span>, <span>array <var>$options</var> = []</span> )</code>
+			<code><a href="source-class-APWG.API.ReportPhishing.ReportPhishingClient.html#31-42" title="Go to source code">get</a>( <span>integer <var>$id</var></span>, <span>array <var>$options</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Gets a specific email</p>
@@ -220,6 +222,46 @@
 						<dt><var>$id</var></dt>
 						<dd>the email id</dd>
 						<dt><var>$options</var></dt>
+						<dd>an associative array of query parameters</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getParamSchema" id="_getParamSchema">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getParamSchema">#</a>
+			<code><a href="source-class-APWG.API.ReportPhishing.ReportPhishingClient.html#44-55" title="Go to source code">getParamSchema</a>( <span>integer <var>$options</var> = []</span>, <span>array <var>$options</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Return a JSON schema for the report_phishing module's GET:/report_phishing endpoint parameters, useful for validating Alert queries</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return a JSON schema for the report_phishing module's GET:/report_phishing endpoint parameters, useful for validating Alert queries</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$options</var></dt>
+						<dd>$id the phish id</dd>
+						<dt><var>$options</var>,…</dt>
 						<dd>an associative array of query parameters</dd>
 					</dl></div>
 
