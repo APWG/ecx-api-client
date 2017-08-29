@@ -59,6 +59,10 @@
 						</a>
 							<ul>
 					<li>
+						<a href="namespace-APWG.API.Alerts.html">
+							Alerts						</a>
+							</li>
+					<li>
 						<a href="namespace-APWG.API.Groups.html">
 							Groups						</a>
 							</li>
@@ -73,10 +77,6 @@
 					<li class="active">
 						<a href="namespace-APWG.API.Phish.html">
 							Phish						</a>
-							</li>
-					<li>
-						<a href="namespace-APWG.API.Query.html">
-							Query						</a>
 							</li>
 					<li>
 						<a href="namespace-APWG.API.ReportPhishing.html">
@@ -110,7 +110,7 @@
 
 
 	<div class="description">
-	<p>Interact with the Phish (UBL) API module</p>
+	<p>Interact with the Phish (UBL) API</p>
 
 <p>Class PhishClient</p>
 	</div>
@@ -146,10 +146,10 @@
 		<b>Package:</b> APWG\API\Phish<br>
 
 				<b>Copyright:</b>
-				Copyright (c) 2016. The Anti-Phishing Working Group<br>
+				Copyright (c) 2017 The Anti-Phishing Working Group<br>
 				<b>Author:</b>
 				Andrew Breksa<br>
-			<b>Located at</b> <a href="source-class-APWG.API.Phish.PhishClient.html#7-198" title="Go to source code">APWG/API/Phish/PhishClient.php</a>
+			<b>Located at</b> <a href="source-class-APWG.API.Phish.PhishClient.html#7-201" title="Go to source code">APWG/API/Phish/PhishClient.php</a>
 		<br>
 	</div>
 
@@ -287,7 +287,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_inactive">#</a>
-			<code><a href="source-class-APWG.API.Phish.PhishClient.html#58-66" title="Go to source code">inactive</a>( <span>integer <var>$id</var></span> )</code>
+			<code class="deprecated"><a href="source-class-APWG.API.Phish.PhishClient.html#58-67" title="Go to source code">inactive</a>( <span>integer <var>$id</var></span> )</code>
 
 			<div class="description short">
 				<p>Marks a phish as inactive</p>
@@ -296,6 +296,9 @@
 			<div class="description detailed hidden">
 				<p>Marks a phish as inactive</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -325,7 +328,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_head">#</a>
-			<code><a href="source-class-APWG.API.Phish.PhishClient.html#68-76" title="Go to source code">head</a>( <span>integer <var>$id</var></span> )</code>
+			<code><a href="source-class-APWG.API.Phish.PhishClient.html#69-77" title="Go to source code">head</a>( <span>integer <var>$id</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks that a phish by that ID exists and returns a last-modified header</p>
@@ -363,14 +366,14 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_patch">#</a>
-			<code><a href="source-class-APWG.API.Phish.PhishClient.html#79-90" title="Go to source code">patch</a>( <span>integer <var>$id</var></span>, <span>array <var>$data</var></span> )</code>
+			<code><a href="source-class-APWG.API.Phish.PhishClient.html#80-92" title="Go to source code">patch</a>( <span>integer <var>$id</var></span>, <span>array <var>$data</var></span>, <span> <var>$options</var> = []</span> )</code>
 
 			<div class="description short">
-				<p>Updates a phish's confidence level</p>
+				<p>Updates a phish</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Updates a phish's confidence level</p>
+				<p>Updates a phish</p>
 
 
 					<h4>Parameters</h4>
@@ -378,6 +381,8 @@
 						<dt><var>$id</var></dt>
 						<dd>the phish id</dd>
 						<dt><var>$data</var></dt>
+						<dd></dd>
+						<dt><var>$options</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -403,7 +408,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_revive">#</a>
-			<code><a href="source-class-APWG.API.Phish.PhishClient.html#93-104" title="Go to source code">revive</a>( <span>integer <var>$id</var></span>, <span>array <var>$data</var></span> )</code>
+			<code class="deprecated"><a href="source-class-APWG.API.Phish.PhishClient.html#95-107" title="Go to source code">revive</a>( <span>integer <var>$id</var></span>, <span>array <var>$data</var></span> )</code>
 
 			<div class="description short">
 				<p>Revives an inactive phish</p>
@@ -412,6 +417,9 @@
 			<div class="description detailed hidden">
 				<p>Revives an inactive phish</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -443,7 +451,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_searchActivity">#</a>
-			<code><a href="source-class-APWG.API.Phish.PhishClient.html#106-116" title="Go to source code">searchActivity</a>( <span>array <var>$options</var> = []</span> )</code>
+			<code><a href="source-class-APWG.API.Phish.PhishClient.html#109-119" title="Go to source code">searchActivity</a>( <span>array <var>$options</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Searches the UBL activity listing</p>
@@ -481,7 +489,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_activity">#</a>
-			<code><a href="source-class-APWG.API.Phish.PhishClient.html#118-130" title="Go to source code">activity</a>( <span> <var>$id</var></span>, <span> <var>$options</var> = []</span> )</code>
+			<code><a href="source-class-APWG.API.Phish.PhishClient.html#121-133" title="Go to source code">activity</a>( <span> <var>$id</var></span>, <span> <var>$options</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Get the UBL activity listings for a specific phish</p>
@@ -521,7 +529,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_collaborate">#</a>
-			<code><a href="source-class-APWG.API.Phish.PhishClient.html#132-140" title="Go to source code">collaborate</a>( <span>integer <var>$id</var></span> )</code>
+			<code><a href="source-class-APWG.API.Phish.PhishClient.html#135-143" title="Go to source code">collaborate</a>( <span>integer <var>$id</var></span> )</code>
 
 			<div class="description short">
 				<p>Tag yourself as a collaborator for a phish</p>
@@ -559,7 +567,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_collaboration">#</a>
-			<code><a href="source-class-APWG.API.Phish.PhishClient.html#142-150" title="Go to source code">collaboration</a>( <span>integer <var>$id</var></span> )</code>
+			<code><a href="source-class-APWG.API.Phish.PhishClient.html#145-153" title="Go to source code">collaboration</a>( <span>integer <var>$id</var></span> )</code>
 
 			<div class="description short">
 				<p>View your collaboration entry for a specific entity</p>
@@ -597,7 +605,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_lastCollaboration">#</a>
-			<code><a href="source-class-APWG.API.Phish.PhishClient.html#152-160" title="Go to source code">lastCollaboration</a>( <span>integer <var>$id</var></span> )</code>
+			<code><a href="source-class-APWG.API.Phish.PhishClient.html#155-163" title="Go to source code">lastCollaboration</a>( <span>integer <var>$id</var></span> )</code>
 
 			<div class="description short">
 				<p>Get a Last-Modified header with the timestamp of the last collaboration activity for a specific entity</p>
@@ -635,7 +643,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_collaborations">#</a>
-			<code><a href="source-class-APWG.API.Phish.PhishClient.html#162-173" title="Go to source code">collaborations</a>( <span>array <var>$options</var> = []</span> )</code>
+			<code><a href="source-class-APWG.API.Phish.PhishClient.html#165-176" title="Go to source code">collaborations</a>( <span>array <var>$options</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Search your collaborations for this module</p>
@@ -643,44 +651,6 @@
 
 			<div class="description detailed hidden">
 				<p>Search your collaborations for this module</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$options</var></dt>
-						<dd></dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						Psr\Http\Message\ResponseInterface
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="brands" id="_brands">
-
-			<td class="attributes"><code>
-				 public 
-				Psr\Http\Message\ResponseInterface
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_brands">#</a>
-			<code><a href="source-class-APWG.API.Phish.PhishClient.html#175-186" title="Go to source code">brands</a>( <span>array <var>$options</var> = []</span> )</code>
-
-			<div class="description short">
-				<p>Search this modules submitted brands</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Search this modules submitted brands</p>
 
 
 					<h4>Parameters</h4>
@@ -711,7 +681,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeCollaboration">#</a>
-			<code><a href="source-class-APWG.API.Phish.PhishClient.html#188-197" title="Go to source code">removeCollaboration</a>( <span>integer <var>$id</var></span> )</code>
+			<code><a href="source-class-APWG.API.Phish.PhishClient.html#178-187" title="Go to source code">removeCollaboration</a>( <span>integer <var>$id</var></span> )</code>
 
 			<div class="description short">
 				<p>Remove yourself as a collaborator from a phish</p>
@@ -725,6 +695,46 @@
 					<div class="list"><dl>
 						<dt><var>$id</var></dt>
 						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getParamSchema" id="_getParamSchema">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getParamSchema">#</a>
+			<code><a href="source-class-APWG.API.Phish.PhishClient.html#189-200" title="Go to source code">getParamSchema</a>( <span>integer <var>$options</var> = []</span>, <span>array <var>$options</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Return a JSON schema for the phish module's GET:/phish endpoint parameters, useful for validating Alert queries</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return a JSON schema for the phish module's GET:/phish endpoint parameters, useful for validating Alert queries</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$options</var></dt>
+						<dd>$id the phish id</dd>
+						<dt><var>$options</var>,…</dt>
+						<dd>an associative array of query parameters</dd>
 					</dl></div>
 
 					<h4>Returns</h4>

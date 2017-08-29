@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class APWG\API\Query\QueryClient</title>
+	<title>Class APWG\API\Alerts\AlertsClient</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -28,7 +28,7 @@
 
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="namespace-APWG.API.Query.html" title="Summary of APWG\API\Query"><span>Namespace</span></a>
+						<a href="namespace-APWG.API.Alerts.html" title="Summary of APWG\API\Alerts"><span>Namespace</span></a>
 					</li>
 					<li class="active">
 <span>Class</span>					</li>
@@ -58,6 +58,10 @@
 							API<span></span>
 						</a>
 							<ul>
+					<li class="active">
+						<a href="namespace-APWG.API.Alerts.html">
+							Alerts						</a>
+							</li>
 					<li>
 						<a href="namespace-APWG.API.Groups.html">
 							Groups						</a>
@@ -74,10 +78,6 @@
 						<a href="namespace-APWG.API.Phish.html">
 							Phish						</a>
 							</li>
-					<li class="active">
-						<a href="namespace-APWG.API.Query.html">
-							Query						</a>
-							</li>
 					<li>
 						<a href="namespace-APWG.API.ReportPhishing.html">
 							ReportPhishing						</a>
@@ -90,7 +90,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-APWG.API.Query.QueryClient.html">QueryClient</a></li>
+				<li class="active"><a href="class-APWG.API.Alerts.AlertsClient.html">AlertsClient</a></li>
 			</ul>
 
 
@@ -106,13 +106,13 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class QueryClient</h1>
+	<h1>Class AlertsClient</h1>
 
 
 	<div class="description">
-	<p>Interact with the Query API module</p>
+	<p>Interact with the Alert API</p>
 
-<p>Class QueryClient</p>
+<p>Class AlertsClient</p>
 	</div>
 
 	<dl class="tree well">
@@ -126,7 +126,7 @@
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-<b><span>APWG\API\Query\QueryClient</span></b>			
+<b><span>APWG\API\Alerts\AlertsClient</span></b>			
 			
 			
 		</dd>
@@ -142,14 +142,14 @@
 	<div class="alert alert-info">
 		
 		
-		<b>Namespace:</b> <a href="namespace-APWG.html">APWG</a>\<a href="namespace-APWG.API.html">API</a>\<a href="namespace-APWG.API.Query.html">Query</a><br>
-		<b>Package:</b> APWG\API\Query<br>
+		<b>Namespace:</b> <a href="namespace-APWG.html">APWG</a>\<a href="namespace-APWG.API.html">API</a>\<a href="namespace-APWG.API.Alerts.html">Alerts</a><br>
+		<b>Package:</b> APWG\API\Alerts<br>
 
 				<b>Copyright:</b>
-				Copyright (c) 2016. The Anti-Phishing Working Group<br>
+				Copyright (c) 2017 The Anti-Phishing Working Group<br>
 				<b>Author:</b>
 				Andrew Breksa<br>
-			<b>Located at</b> <a href="source-class-APWG.API.Query.QueryClient.html#7-28" title="Go to source code">APWG/API/Query/QueryClient.php</a>
+			<b>Located at</b> <a href="source-class-APWG.API.Alerts.AlertsClient.html#10-96" title="Go to source code">APWG/API/Alerts/AlertsClient.php</a>
 		<br>
 	</div>
 
@@ -169,20 +169,222 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_search">#</a>
-			<code><a href="source-class-APWG.API.Query.QueryClient.html#17-27" title="Go to source code">search</a>( <span>array <var>$options</var> = []</span> )</code>
+			<code><a href="source-class-APWG.API.Alerts.AlertsClient.html#20-30" title="Go to source code">search</a>( <span>array <var>$options</var> = []</span> )</code>
 
 			<div class="description short">
-				<p>Search across all available modules</p>
+				<p>Searches your Alerts</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Search across all available modules</p>
+				<p>Searches your Alerts</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$options</var></dt>
 						<dd>an associative array of query parameters</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get" id="_get">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get">#</a>
+			<code><a href="source-class-APWG.API.Alerts.AlertsClient.html#32-43" title="Go to source code">get</a>( <span>integer <var>$id</var></span>, <span>array <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Gets a specific Alert</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Gets a specific Alert</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd>the Alert id</dd>
+						<dt><var>$options</var></dt>
+						<dd>an associative array of query parameters</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="create" id="_create">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_create">#</a>
+			<code><a href="source-class-APWG.API.Alerts.AlertsClient.html#45-57" title="Go to source code">create</a>( <span>array <var>$data</var></span>, <span>array <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Creates a new Alert</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Creates a new Alert</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd>an associative array of Alert data</dd>
+						<dt><var>$options</var></dt>
+						<dd>an associative array pf query parameters</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="inactive" id="_inactive">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_inactive">#</a>
+			<code><a href="source-class-APWG.API.Alerts.AlertsClient.html#59-69" title="Go to source code">inactive</a>( <span>integer <var>$id</var></span>, <span> <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Updates an Alert to status: inactive</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Updates an Alert to status: inactive</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd>the Alert id</dd>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="patch" id="_patch">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_patch">#</a>
+			<code><a href="source-class-APWG.API.Alerts.AlertsClient.html#71-83" title="Go to source code">patch</a>( <span>integer <var>$id</var></span>, <span>array <var>$data</var></span>, <span> <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Updates an Alert</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Updates an Alert</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd>the Alert id</dd>
+						<dt><var>$data</var></dt>
+						<dd></dd>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ResponseInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="active" id="_active">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ResponseInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_active">#</a>
+			<code><a href="source-class-APWG.API.Alerts.AlertsClient.html#85-95" title="Go to source code">active</a>( <span>integer <var>$id</var></span>, <span> <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Updates an Alert to status: active</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Updates an Alert to status: active</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd>the Alert id</dd>
+						<dt><var>$options</var></dt>
+						<dd></dd>
 					</dl></div>
 
 					<h4>Returns</h4>

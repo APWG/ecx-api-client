@@ -1,16 +1,17 @@
 <?php
+
 namespace APWG\API\Groups;
 
 use APWG\API\AbstractClient;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Interact with the Groups API module
+ * Interact with the Groups API
  *
  * Class GroupsClient
  * @package APWG\API\Groups
- * @author Andrew Breksa
- * @copyright Copyright (c) 2016. The Anti-Phishing Working Group
+ * @author Andrew Breksa <andrew@apwg.org>
+ * @copyright Copyright (c) 2017 The Anti-Phishing Working Group
  */
 class GroupsClient extends AbstractClient {
 
@@ -40,12 +41,13 @@ class GroupsClient extends AbstractClient {
 	 * @return string
 	 */
 	public function getGroupUrl($group_id = NULL) {
-		if (is_null($group_id)) {
+		if(is_null($group_id)) {
 			$group_id = $this->getGroupId();
 		}
-		if (is_null($group_id)) {
+		if(is_null($group_id)) {
 			throw  new \InvalidArgumentException('no group id provided via the method call and none set');
 		}
+
 		return 'groups/' . $group_id;
 	}
 
@@ -69,17 +71,32 @@ class GroupsClient extends AbstractClient {
 	/**
 	 * Returns the JSON schema for a specific action, defaults to the full group threat model schema (GET)
 	 *
-	 * @param array       $options
+	 * @param array $options
 	 * @param string|null $action
 	 * @param string|null $group_id
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface
 	 */
 	public function getSchema($options = [], $action = NULL, $group_id = NULL) {
-		if (is_null($action)) {
+		if(is_null($action)) {
 			$action = 'get';
 		}
+
 		return $this->_call('get', $this->getGroupUrl($group_id) . '/schema/' . $action, [
+			'query' => $options,
+		]);
+	}
+
+	/**
+	 * Return a JSON schema for the group's GET:/groups/<group_id> endpoint parameters, useful for validating Alert queries
+	 *
+	 * @param array $options
+	 * @param null $group_id
+	 *
+	 * @return \Psr\Http\Message\ResponseInterface
+	 */
+	public function getParamSchema($options = [], $group_id = NULL) {
+		return $this->_call('get', $this->getGroupUrl($group_id) . '/param_schema', [
 			'query' => $options,
 		]);
 	}
@@ -87,7 +104,7 @@ class GroupsClient extends AbstractClient {
 	/**
 	 * Search the activity listing for the group's entities
 	 *
-	 * @param array       $options
+	 * @param array $options
 	 * @param null|string $group_id
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface
@@ -101,7 +118,7 @@ class GroupsClient extends AbstractClient {
 	/**
 	 * Get header information for a specific entity
 	 *
-	 * @param int         $entity_id
+	 * @param int $entity_id
 	 * @param null|string $group_id
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface
@@ -113,8 +130,8 @@ class GroupsClient extends AbstractClient {
 	/**
 	 * Search the activity listing for a specific entity
 	 *
-	 * @param int         $entity_id
-	 * @param array       $options
+	 * @param int $entity_id
+	 * @param array $options
 	 * @param null|string $group_id
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface
@@ -128,9 +145,9 @@ class GroupsClient extends AbstractClient {
 	/**
 	 * Edit a group entity
 	 *
-	 * @param int         $entity_id
-	 * @param array       $data
-	 * @param array       $options
+	 * @param int $entity_id
+	 * @param array $data
+	 * @param array $options
 	 * @param null|string $group_id
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface
@@ -145,8 +162,8 @@ class GroupsClient extends AbstractClient {
 	/**
 	 * Get a specific entity
 	 *
-	 * @param int         $entity_id
-	 * @param array       $options
+	 * @param int $entity_id
+	 * @param array $options
 	 * @param null|string $group_id
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface
@@ -160,7 +177,7 @@ class GroupsClient extends AbstractClient {
 	/**
 	 * Search the group's entities
 	 *
-	 * @param array       $options
+	 * @param array $options
 	 * @param null|string $group_id
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface
@@ -174,8 +191,8 @@ class GroupsClient extends AbstractClient {
 	/**
 	 * Submit a new entity to this group
 	 *
-	 * @param array       $data
-	 * @param array       $options
+	 * @param array $data
+	 * @param array $options
 	 * @param null|string $group_id
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface
@@ -188,11 +205,11 @@ class GroupsClient extends AbstractClient {
 	}
 
 	/**
-	 * @param int         $entity_id
-	 * @param string      $file_path
-	 * @param array       $options
+	 * @param int $entity_id
+	 * @param string $file_path
+	 * @param array $options
 	 * @param null|string $group_id
-	 * @param callable    $progress_callback Callback to be executed on transfer progress, as per http://docs.guzzlephp.org/en/latest/request-options.html#progress
+	 * @param callable $progress_callback Callback to be executed on transfer progress, as per http://docs.guzzlephp.org/en/latest/request-options.html#progress
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface
 	 */
@@ -207,17 +224,17 @@ class GroupsClient extends AbstractClient {
 							'contents' => fopen($file_path, 'r'),
 							'filename' => pathinfo($file_path, PATHINFO_BASENAME),
 						],
-					]
+					],
 				],
 				is_null($progress_callback) ? [] : ['progress' => $progress_callback]
 			));
 	}
 
 	/**
-	 * @param int    $entity_id
+	 * @param int $entity_id
 	 * @param string $file_hash
-	 * @param array  $options
-	 * @param null   $group_id
+	 * @param array $options
+	 * @param null $group_id
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface
 	 */
@@ -230,10 +247,10 @@ class GroupsClient extends AbstractClient {
 	}
 
 	/**
-	 * @param int      $entity_id
-	 * @param string   $file_hash
-	 * @param array    $options
-	 * @param null     $group_id
+	 * @param int $entity_id
+	 * @param string $file_hash
+	 * @param array $options
+	 * @param null $group_id
 	 * @param callable $progress_callback Callback to be executed on transfer progress, as per http://docs.guzzlephp.org/en/latest/request-options.html#progress
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface
@@ -244,13 +261,16 @@ class GroupsClient extends AbstractClient {
 				'query' => $options,
 			]
 		);
-		$request = new Request('GET', json_decode($response->getBody()->getContents(), TRUE)['_links']['download']['href']);
-		return $this->getClient()->send($request, is_null($progress_callback) ? [] : ['progress' => $progress_callback]);
+		$request  = new Request('GET',
+			json_decode($response->getBody()->getContents(), TRUE)['_links']['download']['href']);
+
+		return $this->getClient()->send($request,
+			is_null($progress_callback) ? [] : ['progress' => $progress_callback]);
 	}
 
 	/**
-	 * @param int      $entity_id
-	 * @param array    $options
+	 * @param int $entity_id
+	 * @param array $options
 	 * @param null|int $group_id
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface
@@ -264,8 +284,8 @@ class GroupsClient extends AbstractClient {
 	}
 
 	/**
-	 * @param int      $entity_id
-	 * @param array    $options
+	 * @param int $entity_id
+	 * @param array $options
 	 * @param null|int $group_id
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface
@@ -279,8 +299,8 @@ class GroupsClient extends AbstractClient {
 	}
 
 	/**
-	 * @param  int     $entity_id
-	 * @param  string  $note
+	 * @param  int $entity_id
+	 * @param  string $note
 	 * @param null|int $group_id
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface

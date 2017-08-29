@@ -59,6 +59,10 @@
 						</a>
 							<ul>
 					<li>
+						<a href="namespace-APWG.API.Alerts.html">
+							Alerts						</a>
+							</li>
+					<li>
 						<a href="namespace-APWG.API.Groups.html">
 							Groups						</a>
 							</li>
@@ -73,10 +77,6 @@
 					<li>
 						<a href="namespace-APWG.API.Phish.html">
 							Phish						</a>
-							</li>
-					<li>
-						<a href="namespace-APWG.API.Query.html">
-							Query						</a>
 							</li>
 					<li>
 						<a href="namespace-APWG.API.ReportPhishing.html">
@@ -133,11 +133,11 @@
 	<div>
 		<h3>Direct known subclasses</h3>
 		<p class="elementList">
+			<code><a href="class-APWG.API.Alerts.AlertsClient.html">APWG\API\Alerts\AlertsClient</a></code>, 
 			<code><a href="class-APWG.API.Groups.GroupsClient.html">APWG\API\Groups\GroupsClient</a></code>, 
 			<code><a href="class-APWG.API.Index.IndexClient.html">APWG\API\Index\IndexClient</a></code>, 
 			<code><a href="class-APWG.API.MalIP.MalIPClient.html">APWG\API\MalIP\MalIPClient</a></code>, 
 			<code><a href="class-APWG.API.Phish.PhishClient.html">APWG\API\Phish\PhishClient</a></code>, 
-			<code><a href="class-APWG.API.Query.QueryClient.html">APWG\API\Query\QueryClient</a></code>, 
 			<code><a href="class-APWG.API.ReportPhishing.ReportPhishingClient.html">APWG\API\ReportPhishing\ReportPhishingClient</a></code>
 		</p>
 	</div>
@@ -154,10 +154,10 @@
 		<b>Package:</b> APWG\API<br>
 
 				<b>Copyright:</b>
-				Copyright (c) 2016. The Anti-Phishing Working Group<br>
+				Copyright (c) 2017 The Anti-Phishing Working Group<br>
 				<b>Author:</b>
 				Andrew Breksa<br>
-			<b>Located at</b> <a href="source-class-APWG.API.AbstractClient.html#9-229" title="Go to source code">APWG/API/AbstractClient.php</a>
+			<b>Located at</b> <a href="source-class-APWG.API.AbstractClient.html#9-234" title="Go to source code">APWG/API/AbstractClient.php</a>
 		<br>
 	</div>
 
@@ -177,7 +177,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getGlobalOptions">#</a>
-			<code><a href="source-class-APWG.API.AbstractClient.html#63-70" title="Go to source code">getGlobalOptions</a>( )</code>
+			<code><a href="source-class-APWG.API.AbstractClient.html#68-75" title="Go to source code">getGlobalOptions</a>( )</code>
 
 			<div class="description short">
 				<p>Get the global options that are merged with every request</p>
@@ -210,7 +210,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setGlobalOptions">#</a>
-			<code><a href="source-class-APWG.API.AbstractClient.html#72-82" title="Go to source code">setGlobalOptions</a>( <span>array <var>$globalOptions</var></span> )</code>
+			<code><a href="source-class-APWG.API.AbstractClient.html#77-87" title="Go to source code">setGlobalOptions</a>( <span>array <var>$globalOptions</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the global options that are merged with every request</p>
@@ -248,7 +248,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-APWG.API.AbstractClient.html#84-96" title="Go to source code">__construct</a>( <span>string <var>$base_uri</var></span>, <span>string <var>$apiKey</var></span>, <span>array <var>$guzzleOptions</var> = []</span> )</code>
+			<code><a href="source-class-APWG.API.AbstractClient.html#89-101" title="Go to source code">__construct</a>( <span>string <var>$base_uri</var></span>, <span>string <var>$apiKey</var></span>, <span>array <var>$guzzleOptions</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>AbstractAPI constructor.</p>
@@ -286,7 +286,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getGuzzleOptions">#</a>
-			<code><a href="source-class-APWG.API.AbstractClient.html#98-105" title="Go to source code">getGuzzleOptions</a>( )</code>
+			<code><a href="source-class-APWG.API.AbstractClient.html#103-110" title="Go to source code">getGuzzleOptions</a>( )</code>
 
 			<div class="description short">
 				<p>Get the default GuzzleHTTP options</p>
@@ -319,7 +319,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setGuzzleOptions">#</a>
-			<code><a href="source-class-APWG.API.AbstractClient.html#107-119" title="Go to source code">setGuzzleOptions</a>( <span>array <var>$guzzleOptions</var></span> )</code>
+			<code><a href="source-class-APWG.API.AbstractClient.html#112-124" title="Go to source code">setGuzzleOptions</a>( <span>array <var>$guzzleOptions</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the default GuzzleHTTP options</p>
@@ -357,7 +357,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getBaseUri">#</a>
-			<code><a href="source-class-APWG.API.AbstractClient.html#121-128" title="Go to source code">getBaseUri</a>( )</code>
+			<code><a href="source-class-APWG.API.AbstractClient.html#126-133" title="Go to source code">getBaseUri</a>( )</code>
 
 			<div class="description short">
 				<p>Get the API base URI</p>
@@ -390,7 +390,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setBaseUri">#</a>
-			<code><a href="source-class-APWG.API.AbstractClient.html#130-140" title="Go to source code">setBaseUri</a>( <span>string <var>$base_uri</var></span> )</code>
+			<code><a href="source-class-APWG.API.AbstractClient.html#135-145" title="Go to source code">setBaseUri</a>( <span>string <var>$base_uri</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the base API URI</p>
@@ -428,7 +428,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__call">#</a>
-			<code><a href="source-class-APWG.API.AbstractClient.html#142-167" title="Go to source code">_call</a>( <span> <var>$method</var></span>, <span> <var>$path</var></span>, <span>array <var>$options</var> = []</span> )</code>
+			<code><a href="source-class-APWG.API.AbstractClient.html#147-172" title="Go to source code">_call</a>( <span> <var>$method</var></span>, <span> <var>$path</var></span>, <span>array <var>$options</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Internal method to call the API</p>
@@ -472,7 +472,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getClient">#</a>
-			<code><a href="source-class-APWG.API.AbstractClient.html#169-176" title="Go to source code">getClient</a>( )</code>
+			<code><a href="source-class-APWG.API.AbstractClient.html#174-181" title="Go to source code">getClient</a>( )</code>
 
 			<div class="description short">
 				<p>Get the HTTP Client</p>
@@ -505,7 +505,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setClient">#</a>
-			<code><a href="source-class-APWG.API.AbstractClient.html#178-188" title="Go to source code">setClient</a>( <span><code><a href="class-APWG.API.ClientInterface.html">APWG\API\ClientInterface</a></code> <var>$client</var></span> )</code>
+			<code><a href="source-class-APWG.API.AbstractClient.html#183-193" title="Go to source code">setClient</a>( <span><code><a href="class-APWG.API.ClientInterface.html">APWG\API\ClientInterface</a></code> <var>$client</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the HTTP Client</p>
@@ -543,7 +543,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getApiKey">#</a>
-			<code><a href="source-class-APWG.API.AbstractClient.html#190-197" title="Go to source code">getApiKey</a>( )</code>
+			<code><a href="source-class-APWG.API.AbstractClient.html#195-202" title="Go to source code">getApiKey</a>( )</code>
 
 			<div class="description short">
 				<p>Return the API Key</p>
@@ -576,7 +576,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setApiKey">#</a>
-			<code><a href="source-class-APWG.API.AbstractClient.html#199-209" title="Go to source code">setApiKey</a>( <span>string <var>$apiKey</var></span> )</code>
+			<code><a href="source-class-APWG.API.AbstractClient.html#204-214" title="Go to source code">setApiKey</a>( <span>string <var>$apiKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the API key</p>
@@ -614,7 +614,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCache">#</a>
-			<code><a href="source-class-APWG.API.AbstractClient.html#211-218" title="Go to source code">getCache</a>( )</code>
+			<code><a href="source-class-APWG.API.AbstractClient.html#216-223" title="Go to source code">getCache</a>( )</code>
 
 			<div class="description short">
 				<p>Get the most recent request</p>
@@ -649,7 +649,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setCache">#</a>
-			<code><a href="source-class-APWG.API.AbstractClient.html#220-227" title="Go to source code">setCache</a>( <span>Psr\Http\Message\ResponseInterface <var>$cache</var></span> )</code>
+			<code><a href="source-class-APWG.API.AbstractClient.html#225-232" title="Go to source code">setCache</a>( <span>Psr\Http\Message\ResponseInterface <var>$cache</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the most recent request</p>
@@ -797,7 +797,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-APWG.API.AbstractClient.html#47-54" title="Go to source code"><var>$guzzleOptions</var></a>
+					<a href="source-class-APWG.API.AbstractClient.html#47-59" title="Go to source code"><var>$guzzleOptions</var></a>
 
 				<div class="description short">
 					<p>The default GuzzleHTTP options</p>
@@ -813,6 +813,11 @@
 					<a href="#$guzzleOptions" class="anchor">#</a>
 					<code>[
     <span class="php-quote">'timeout'</span> =&gt; <span class="php-num">5</span>,
+    <span class="php-quote">'curl'</span>    =&gt; [
+        CURLOPT_TIMEOUT        =&gt; <span class="php-num">0</span>,
+        CURLOPT_TIMEOUT_MS     =&gt; <span class="php-num">0</span>,
+        CURLOPT_CONNECTTIMEOUT =&gt; <span class="php-num">0</span>,
+    ],
 ]</code>
 				</div>
 			</td>
@@ -824,7 +829,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-APWG.API.AbstractClient.html#56-61" title="Go to source code"><var>$cache</var></a>
+					<a href="source-class-APWG.API.AbstractClient.html#61-66" title="Go to source code"><var>$cache</var></a>
 
 				<div class="description short">
 					<p>The request cache, the most recent request</p>

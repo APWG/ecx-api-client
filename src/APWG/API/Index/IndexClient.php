@@ -1,15 +1,17 @@
 <?php
+
 namespace APWG\API\Index;
+
 use APWG\API\AbstractClient;
 use Psr\Http\Message\ResponseInterface;
 
 /**
- * Interact with the Index API module
+ * Interact with the Index API
  *
  * Class IndexClient
  * @package APWG\API\Index
- * @author Andrew Breksa
- * @copyright Copyright (c) 2016. The Anti-Phishing Working Group
+ * @author Andrew Breksa <andrew@apwg.org>
+ * @copyright Copyright (c) 2017 The Anti-Phishing Working Group
  */
 class IndexClient extends AbstractClient {
 
@@ -23,7 +25,7 @@ class IndexClient extends AbstractClient {
 	}
 
 	/**
-	 * Returns the '/' index content of the API, a list of available modules
+	 * Returns the '/' index content of the API, a list of available modules, groups, and utilities
 	 *
 	 * @return ResponseInterface
 	 */
