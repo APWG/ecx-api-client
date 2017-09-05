@@ -1,6 +1,6 @@
 {
 	"name": "apwg/ecx-api-client",
-	"version": "0.5.0.0",
+	"version": "0.5.0.3",
 	"type": "library",
 	"description": "The official PHP client to the APWG API",
 	"authors": [
