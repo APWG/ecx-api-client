@@ -1,6 +1,11 @@
 ## Change Log
 
-### upcoming (2017/08/29@07:56)
+### upcoming (2017/09/05@16:01)
+- [51274a2](https://github.com/APWG/ecx-api-client/commit/51274a25cba93a2b18d68e57e7365da99d305c1f) update docs (@abreksa4)
+- [d1cfd08](https://github.com/APWG/ecx-api-client/commit/d1cfd08d5cb8ac259c7cdf3db59a49369bfe5103) remove collaboration support (@abreksa4)
+
+### v0.5.0.0 (2017/08/29@07:57)
+- [678d65e](https://github.com/APWG/ecx-api-client/commit/678d65e3185fba2a7233636791591ed391d14d05) updated changelog (@abreksa4)
 - [#3](https://github.com/apwg/ecx-api-client/pull/3) Merge pull request #3 from APWG/dev (@APWG)
 - [790165d](https://github.com/APWG/ecx-api-client/commit/790165df7d608e6e68e662b3d75b081581d2440c) updated composer.json version to 0.5.0.0 (@abreksa4)
 - [#2](https://github.com/apwg/ecx-api-client/pull/2) Merge pull request #2 from APWG/dev (@APWG)
