@@ -69,52 +69,6 @@ class MalIPClient extends AbstractClient {
 	}
 
 	/**
-	 * Tag yourself as a collaborator for a entity
-	 *
-	 * @param int $id
-	 *
-	 * @return ResponseInterface
-	 */
-	public function collaborate($id) {
-		return $this->_call('post', 'mal_ip/' . $id . '/collaborate', []);
-	}
-
-	/**
-	 * Search your collaborations for this module
-	 *
-	 * @param array $options
-	 *
-	 * @return \Psr\Http\Message\ResponseInterface
-	 */
-	public function collaborations($options = []) {
-		return $this->_call('get', 'mal_ip/collaborate', [
-			'query' => $options,
-		]);
-	}
-
-	/**
-	 * Remove yourself as a collaborator from a entity
-	 *
-	 * @param int $id
-	 *
-	 * @return ResponseInterface
-	 */
-	public function removeCollaboration($id) {
-		return $this->_call('delete', 'mal_ip/' . $id . '/collaborate', []);
-	}
-
-	/**
-	 * View your collaboration entry for a specific entity
-	 *
-	 * @param int $id
-	 *
-	 * @return ResponseInterface
-	 */
-	public function collaboration($id) {
-		return $this->_call('get', 'mal_ip/' . $id . '/collaborate', []);
-	}
-
-	/**
 	 * Get a Last-Modified header with the timestamp of the last collaboration activity for a specific entity
 	 *
 	 * @param int $id

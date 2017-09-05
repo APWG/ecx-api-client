@@ -144,63 +144,6 @@ class PhishClient extends AbstractClient {
 	}
 
 	/**
-	 * Tag yourself as a collaborator for a phish
-	 *
-	 * @param int $id
-	 *
-	 * @return ResponseInterface
-	 */
-	public function collaborate($id) {
-		return $this->_call('post', 'phish/' . $id . '/collaborate', []);
-	}
-
-	/**
-	 * View your collaboration entry for a specific entity
-	 *
-	 * @param int $id
-	 *
-	 * @return ResponseInterface
-	 */
-	public function collaboration($id) {
-		return $this->_call('get', 'phish/' . $id . '/collaborate', []);
-	}
-
-	/**
-	 * Get a Last-Modified header with the timestamp of the last collaboration activity for a specific entity
-	 *
-	 * @param int $id
-	 *
-	 * @return ResponseInterface
-	 */
-	public function lastCollaboration($id) {
-		return $this->_call('head', 'phish/' . $id . '/collaborate', []);
-	}
-
-	/**
-	 * Search your collaborations for this module
-	 *
-	 * @param array $options
-	 *
-	 * @return \Psr\Http\Message\ResponseInterface
-	 */
-	public function collaborations($options = []) {
-		return $this->_call('get', 'phish/collaborate', [
-			'query' => $options,
-		]);
-	}
-
-	/**
-	 * Remove yourself as a collaborator from a phish
-	 *
-	 * @param int $id
-	 *
-	 * @return ResponseInterface
-	 */
-	public function removeCollaboration($id) {
-		return $this->_call('delete', 'phish/' . $id . '/collaborate', []);
-	}
-
-	/**
 	 * Return a JSON schema for the phish module's GET:/phish endpoint parameters, useful for validating Alert queries
 	 *
 	 * @param int $id the phish id
