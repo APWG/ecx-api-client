@@ -1,4 +1,4 @@
-# ecx-api-client
+# ecx-api-client [DEPRECATED]
 *A PHP library for interacting with the APWG eCX API*
 
 Fully supports all features of the eCX API.
